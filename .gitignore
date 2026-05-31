@@ -1,0 +1,16 @@
+# Dependencias
+node_modules/
+
+# Build antiguo de Vite (ahora compilamos en docs/, que SÍ se sube)
+dist/
+
+# Logs y temporales
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.local
+
+# Sistema operativo / editor
+.DS_Store
+.vscode/
+.idea/

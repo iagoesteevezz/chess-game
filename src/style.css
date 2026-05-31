@@ -257,6 +257,42 @@ body {
 .clock.low { color: #ff6b6b; }
 .clock.active.low { background: linear-gradient(180deg, #ff8a5a, #d9543b); color: #fff; }
 
+/* Enlace a GitHub (arriba a la izquierda) */
+.gh-link {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 50;
+  display: inline-flex;
+  align-items: center;
+  height: 38px;
+  padding: 0 8px;
+  border-radius: 19px;
+  color: var(--text);
+  background: rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  transition: color 0.2s, background 0.2s;
+}
+.gh-link svg { flex: none; }
+/* El nombre está oculto (ancho 0) y se despliega a la derecha al pasar el ratón. */
+.gh-name {
+  max-width: 0;
+  opacity: 0;
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: max-width 0.3s ease, opacity 0.2s ease, margin 0.3s ease;
+}
+.gh-link:hover {
+  color: var(--accent);
+  background: rgba(0, 0, 0, 0.6);
+}
+.gh-link:hover .gh-name {
+  max-width: 160px;
+  opacity: 1;
+  margin-left: 8px;
+}
+
 /* Botón salir de pantalla completa (solo visible en modo enfoque) */
 .exit-fs {
   display: none;

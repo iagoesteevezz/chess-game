@@ -340,7 +340,7 @@ export class Game {
 
   private askPromotion(from: Square, to: Square): void {
     const color = this.chess.turn();
-    const set = color === "w"
+    const set: Record<string, string> = color === "w"
       ? { q: "♕", r: "♖", b: "♗", n: "♘" }
       : { q: "♛", r: "♜", b: "♝", n: "♞" };
     this.promo.innerHTML = "";
